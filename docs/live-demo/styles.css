@@ -93,7 +93,7 @@ h2 { margin: 2px 0 12px; font-size: 22px; line-height: 1.1; }
 .price-down { color: var(--sell); }
 
 /* -----------------------------
-   Simplified Centered Footer
+   Centered Glass Footer
 ------------------------------ */
 .dashboard-footer {
   width: min(1560px,calc(100vw-18px));
@@ -103,13 +103,13 @@ h2 { margin: 2px 0 12px; font-size: 22px; line-height: 1.1; }
   backdrop-filter: blur(16px);
   background: rgba(15,23,42,0.6);
   border: 1px solid rgba(247,184,60,0.25);
-  text-align:center;
+  text-align:center; /* Center all content */
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 body.light .dashboard-footer { background: rgba(255,255,255,0.7); }
 
-.dashboard-footer p { margin:4px 0; font-size:13px; color:var(--muted); }
+.dashboard-footer p { margin:6px 0; font-size:13px; color:var(--muted); text-align:center; }
 .dashboard-footer .footer-product { color:var(--accent); font-weight:600; }
 .dashboard-footer .footer-link { display:inline-flex; align-items:center; gap:6px; color:var(--accent); text-decoration:none; font-weight:500; transition: all 0.25s ease; }
 .dashboard-footer .footer-link:hover { text-shadow:0 0 8px rgba(255,202,58,0.6); transform: translateY(-1px); }
