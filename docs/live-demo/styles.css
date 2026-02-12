@@ -60,312 +60,91 @@ body {
     0 14px 24px rgba(0, 0, 0, 0.25);
 }
 
-.sidebar {
-  min-height: calc(100vh - 22px);
-  display: flex;
-  flex-direction: column;
-  padding: 14px 10px;
-}
-
-.sidebar h1 {
-  color: var(--accent);
-  margin: 2px 10px 14px;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-nav {
-  display: grid;
-  gap: 10px;
-  padding: 0 2px;
-}
-
-.menu-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 14px;
-  padding: 10px 12px;
-  border-radius: 11px;
-  background: rgba(30, 41, 59, 0.48);
-  border: 1px solid transparent;
-}
-
-.menu-link span {
-  width: 20px;
-  text-align: center;
-}
-
-.menu-link.active {
-  border-color: rgba(247, 184, 60, 0.62);
-  background: linear-gradient(
-    90deg,
-    rgba(59, 45, 18, 0.72),
-    rgba(49, 46, 33, 0.5)
-  );
-}
-
-.theme-btn {
-  margin: auto 6px 4px;
-  width: max-content;
-  border: 1px solid var(--card-border);
-  background: rgba(8, 12, 24, 0.55);
-  color: var(--text);
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 9px 12px;
-  cursor: pointer;
-}
-
-.content-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: 2fr 1.42fr 1.42fr;
-  grid-template-areas:
-    "chart chart order"
-    "portfolio signal history";
-}
-
-.card {
-  padding: 14px 16px;
-  scroll-margin-top: 14px;
-}
-
-.chart-card { grid-area: chart; }
-.order-card { grid-area: order; }
-.portfolio-card { grid-area: portfolio; }
-.signal-panel { grid-area: signal; }
-.history-card { grid-area: history; }
-
-h2 {
-  margin: 2px 0 12px;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-#chart {
-  width: 100%;
-  height: 255px;
-  display: block;
-  border-radius: 10px;
-}
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.metrics p {
-  margin: 0;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(247, 184, 60, 0.45);
-  background: var(--metric-bg);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.metrics span {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.metrics strong {
-  font-size: 18px;
-  line-height: 1.1;
-}
-
-.book-columns {
-  display: grid;
-  gap: 12px;
-}
-
-.book-heading {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.order-list,
-.signal-log,
-.trade-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 8px;
-}
-
-.order-list li,
-.signal-log li,
-.trade-list li {
-  border-radius: 9px;
-  background: var(--row-bg);
-  padding: 9px 11px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-}
-
-.order-list li span:last-child,
-.signal-log li span:last-child,
-.trade-list li span:last-child {
-  font-variant-numeric: tabular-nums;
-}
-
-.portfolio-grid {
-  display: grid;
-  gap: 10px;
-}
-
-.holding-card {
-  border-radius: 10px;
-  border: 1px solid rgba(247, 184, 60, 0.52);
-  background: var(--metric-bg);
-  padding: 8px 10px;
-}
-
-.holding-symbol {
-  margin: 0;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.holding-value {
-  margin: 3px 0 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.signal-card {
-  border-radius: 11px;
-  border: 1px solid rgba(59, 130, 246, 0.32);
-  padding: 10px 12px;
-  margin-bottom: 10px;
-}
-
-.signal-card.buy {
-  background: rgba(7, 67, 56, 0.48);
-  border-color: rgba(0, 255, 195, 0.35);
-}
-
-.signal-card.sell {
-  background: rgba(70, 22, 42, 0.5);
-  border-color: rgba(255, 79, 135, 0.36);
-}
-
-.signal-card.hold {
-  background: rgba(58, 44, 13, 0.48);
-  border-color: rgba(255, 202, 58, 0.35);
-}
-
-.signal-card.pulse {
-  transform: scale(1.01);
-}
-
-.signal-card p {
-  margin: 0 0 5px;
-  font-size: 13px;
-}
-
-.price-up { color: var(--buy); }
-.price-down { color: var(--sell); }
-
-/* =================================
-   Production SaaS Footer
-================================= */
+/* ===========================
+   Glassmorphic Footer
+=========================== */
 
 .dashboard-footer {
   width: min(1560px, calc(100vw - 18px));
-  margin: 18px auto 24px;
-  padding-top: 16px;
-  text-align: center;
+  margin: 22px auto 28px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(247, 184, 60, 0.25);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+body.light .dashboard-footer {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-brand {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer-product {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer-right {
+  max-width: 520px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-disclaimer {
   font-size: 13px;
   color: var(--muted);
-  line-height: 1.7;
-  position: relative;
-  animation: fadeInFooter 0.6s ease forwards;
-  opacity: 0;
+  line-height: 1.6;
 }
 
-@keyframes fadeInFooter {
-  to { opacity: 1; }
-}
-
-.dashboard-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(247, 184, 60, 0.4),
-    transparent
-  );
-  opacity: 0.7;
-}
-
-.dashboard-footer p {
-  margin: 4px 0;
-}
-
-.dashboard-footer a {
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--accent);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.25s ease;
-  position: relative;
 }
 
-.dashboard-footer a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.25s ease;
+.footer-link:hover {
+  text-shadow: 0 0 8px rgba(255, 202, 58, 0.5);
+  transform: translateY(-1px);
 }
 
-.dashboard-footer a:hover {
-  text-shadow: 0 0 8px rgba(255, 202, 58, 0.45);
+.footer-link svg {
+  opacity: 0.85;
 }
 
-.dashboard-footer a:hover::after {
-  width: 100%;
-}
+/* Responsive */
 
-@media (max-width: 1300px) {
-  .demo-shell { grid-template-columns: 220px 1fr; }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "chart"
-      "order"
-      "portfolio"
-      "signal"
-      "history";
+@media (max-width: 900px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .sidebar {
-    min-height: auto;
-    position: sticky;
-    top: 12px;
+  .footer-right {
+    text-align: center;
   }
-}
-
-@media (max-width: 880px) {
-  .demo-shell { grid-template-columns: 1fr; }
-  .sidebar { position: static; }
 }
