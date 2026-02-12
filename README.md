@@ -2,6 +2,18 @@
 
 A production-oriented, multi-service AI trading exchange built with React + TypeScript, Rust backend APIs, Rust/WASM chart acceleration, and a Python AI prediction engine.
 
+<a href="https://optimyzm.github.io/AI-Trading-Exchange/">
+  <img src="/images/app-image.png" width="100%" />
+</a>
+
+---
+
+🔗 **[View Live Demo](https://optimyzm.github.io/AI-Trading-Exchange/)**
+
+</div>
+
+> **Simulation note:** - This dashboard is provided for demonstration purposes only and does not constitute financial advice.
+
 ## Problem Statement
 
 Retail and institutional traders need low-latency execution, transparent portfolio state, and AI-assisted directional signals in one cohesive platform. Existing stacks frequently split analytics, execution, and model services across disconnected systems, increasing operational and cognitive overhead.
@@ -158,14 +170,7 @@ Use this quick checklist:
 ## Repository Structure
 
 ```text
-.
-├── .env.example
-├── .github
-│   └── workflows
-│       └── ci.yml
-├── .gitignore
-├── Cargo.toml
-├── README.md
+AI-Trading-Exchange/
 ├── ai-service
 │   ├── Dockerfile
 │   ├── app
@@ -217,9 +222,10 @@ Use this quick checklist:
 │           ├── kafka.rs
 │           ├── mod.rs
 │           └── redis_cache.rs
-├── docker-compose.yml
-├── docs
-│   └── architecture.md
+├── docs/
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
 ├── frontend
 │   ├── Dockerfile
 │   ├── index.html
@@ -248,6 +254,8 @@ Use this quick checklist:
 │   │       └── wasmLoader.ts
 │   ├── tsconfig.json
 │   └── vite.config.ts
+├── images/
+│   └── app-image.png
 ├── infra
 │   ├── grafana
 │   │   └── dashboards.yml
@@ -262,7 +270,16 @@ Use this quick checklist:
 ├── scripts
 │   └── bootstrap.sh
 └── wasm-charts
-    ├── Cargo.toml
-    └── src
-        └── lib.rs
+│   ├── Cargo.toml
+│   └── src
+│       └── lib.rs
+├── .github
+│   └── workflows
+│       ├── ci.yml
+│       └── pages.yml
+├── .env.example
+├── .gitignore
+├── Cargo.toml
+├── README.md
+└── docker-compose.yml
 ```
