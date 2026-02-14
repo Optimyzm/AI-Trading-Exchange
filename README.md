@@ -2,13 +2,13 @@
 
 A production-oriented, multi-service AI trading exchange built with React + TypeScript, Rust backend APIs, Rust/WASM chart acceleration, and a Python AI prediction engine.
 
-<a href="https://nathsgeorgew.github.io/AI-Trading-Exchange/">
+<a href="https://nathswealthgw.github.io/AI-Trading-Exchange/">
   <img src="/images/app-image.png" width="100%" />
 </a>
 
 ---
 
-🔗 **[View Live Demo](https://nathsgeorgew.github.io/AI-Trading-Exchange/)**
+🔗 **[View Live Demo](https://nathswealthgw.github.io/AI-Trading-Exchange/)**
 
 </div>
 
