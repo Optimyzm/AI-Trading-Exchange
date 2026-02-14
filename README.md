@@ -37,6 +37,27 @@ This repository provides a full-stack exchange architecture with:
 - Streaming: Kafka and Redis
 - Infra: Docker Compose, GitHub Actions CI
 
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+    U[Trader / Browser] --> FE[Frontend
+React + TypeScript]
+    FE -->|REST| BE[Backend API
+Rust + Actix-Web]
+    FE -->|WASM Module| WC[wasm-charts
+Rust + WebAssembly]
+    BE -->|Prediction Request| AI[AI Service
+Python FastAPI]
+    AI -->|Signal Response| BE
+    BE -->|SQL| PG[(PostgreSQL)]
+    BE -->|Publish / Consume| K[(Kafka)]
+    BE -->|Cache Hot Data| R[(Redis)]
+    K --> OBS[Monitoring / Consumers]
+    BE --> PR[Prometheus]
+    PR --> GR[Grafana]
+```
+
 ## Architecture Decisions
 
 1. Service decomposition:
